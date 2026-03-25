@@ -1,0 +1,13 @@
+apiVersion: customize.config.k8s.io/v1beta1
+kind: Customization
+
+resources:
+  - ../../base
+
+# 개발 환경에만 붙일 접미사나 네임스페이스 설정
+namePrefix: dev-
+
+# 개발 환경용 이미지 태그 고정
+images:
+  - name: registry.ocp.test.com:5000/demo/test_project
+    newTag: f4901c5d6b0c70687d294c1df93248529279a43e

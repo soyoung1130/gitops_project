@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: test-project-route
+  namespace: test-project
+spec:
+  # host를 비워두면 OpenShift가 자동으로 URL을 생성해 줍니다.
+  # 예: test-project-route-test-project.apps.ocp.test.com
+  to:
+    kind: Service
+    name: test-project-service # 위에서 만든 서비스 이름과 똑같아야 함!
+    weight: 100
+  port:
+    targetPort: 80           # 서비스의 'port'인 80번을 바라봅니다.
+  tls:
+    termination: edge        # HTTPS 설정을 자동으로 입혀줍니다 (보통 기본값)
