@@ -10,4 +10,4 @@ namePrefix: dev-
 # 개발 환경용 이미지 태그 고정
 images:
   - name: registry.ocp.test.com:5000/demo/test-project
-    newTag: fbe7fc8ea44036babc59c23d48338bafaf71f1f0
+    newTag: 235c0131d001952551a1a11c74dc4c8c7bd524bc
