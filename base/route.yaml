@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: test-project-route
-  namespace: test-project
+  namespace: demo
 spec:
   # host를 비워두면 OpenShift가 자동으로 URL을 생성해 줍니다.
   # 예: test-project-route-test-project.apps.ocp.test.com
