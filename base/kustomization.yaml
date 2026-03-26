@@ -9,4 +9,4 @@ resources:
 
 # 공통으로 적용될 이미지 이름 (태그는 비워둡니다)
 images:
-  - name: registry.ocp.test.com:5000/demo/test_project
+  - name: registry.ocp.test.com:5000/demo/test-project

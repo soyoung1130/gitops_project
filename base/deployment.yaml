@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test_project
+  name: test-project
 spec:
   replicas: 1 
   selector:
     matchLabels:
-      app: test_project
+      app: test-project
   template:
     metadata:
       labels:
-        app: test_project
+        app: test-project
     spec:
       containers:
-      - name: test_project
+      - name: test-project
         # 우리가 Tekton으로 빌드한 바로 그 이미지 주소!
-        image: registry.ocp.test.com:5000/demo/test_project:latest
+        image: registry.ocp.test.com:5000/demo/test-project:latest
         env:
         - name: OPENAI_API_KEY
           valueFrom:
